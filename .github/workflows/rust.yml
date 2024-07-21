@@ -52,3 +52,4 @@ jobs:
           pulumi stack output --json
         env:
           PULUMI_CONFIG_PASSPHRASE: ""
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
