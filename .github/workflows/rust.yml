@@ -41,6 +41,14 @@ jobs:
         if: runner.os == 'macOS'
       - run: pulumi version
       - run: pulumi login --local
+      - name: Install Protoc
+        uses: arduino/setup-protoc@v3
+        with:
+          version: "25.3"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - run: protoc --version
+      - name: Install pulumi wasm language
+        run: pulumi plugin install language wasm "0.0.0-NIGHTLY-fe794b0" --server github://api.github.com/andrzejressel/pulumi-wasm
       - name: Run
         run: |
           PULUMI_CONFIG_PASSPHRASE="" pulumi stack init test
