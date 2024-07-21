@@ -262,9 +262,9 @@ dependencies = [
 
 [[package]]
 name = "pulumi_wasm_common"
-version = "0.0.0-NIGHTLY-fe794b0"
+version = "0.0.0-NIGHTLY-0406e48"
 source = "sparse+https://cargo.cloudsmith.io/andrzej-ressel-github/pulumi-wasm/"
-checksum = "64d9abe16b30876f3379b607a530cdd9b15c44fda3ef7dd7ad97bccdb22d79dd"
+checksum = "52487c6ae7f8956dfbbf6d3a4658e25a414cc0fbf7e992eb745e0f5f233fe50c"
 dependencies = [
  "log",
  "pulumi_wasm_wit",
@@ -282,9 +282,9 @@ dependencies = [
 
 [[package]]
 name = "pulumi_wasm_random"
-version = "4.15.0-0.0.0-NIGHTLY-fe794b0"
+version = "4.15.0-0.0.0-NIGHTLY-0406e48"
 source = "sparse+https://cargo.cloudsmith.io/andrzej-ressel-github/pulumi-wasm/"
-checksum = "398a8b41ea23689b1686624cfc0c1ed0c5483a1cdb57cd1af12e30b3be63ecd4"
+checksum = "bdc105c96d80b61eb378b1b66699622f471ca26a2249c54e69f4ede3e4a5ed73"
 dependencies = [
  "automod",
  "pulumi_wasm_rust",
@@ -294,9 +294,9 @@ dependencies = [
 
 [[package]]
 name = "pulumi_wasm_rust"
-version = "0.0.0-NIGHTLY-fe794b0"
+version = "0.0.0-NIGHTLY-0406e48"
 source = "sparse+https://cargo.cloudsmith.io/andrzej-ressel-github/pulumi-wasm/"
-checksum = "2cca703abcba54cc4347d3f09a43834b1f4ec00674afa7d2731952f1c690086d"
+checksum = "b2b410a643a2983982ff0392147d64070b567661228ce8e90710d310b000510e"
 dependencies = [
  "anyhow",
  "bitflags",
@@ -316,9 +316,9 @@ dependencies = [
 
 [[package]]
 name = "pulumi_wasm_rust_macro"
-version = "0.0.0-NIGHTLY-fe794b0"
+version = "0.0.0-NIGHTLY-0406e48"
 source = "sparse+https://cargo.cloudsmith.io/andrzej-ressel-github/pulumi-wasm/"
-checksum = "d4110976d32944aa9ee8fa540decfbdea1a4f4f093e23472781dec6343daeecf"
+checksum = "942f9bb45b894e8005a0815ebd31e4b1cdcecb33cbfe457c284bd7ed6a197cf0"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -327,9 +327,9 @@ dependencies = [
 
 [[package]]
 name = "pulumi_wasm_wit"
-version = "0.0.0-NIGHTLY-fe794b0"
+version = "0.0.0-NIGHTLY-0406e48"
 source = "sparse+https://cargo.cloudsmith.io/andrzej-ressel-github/pulumi-wasm/"
-checksum = "3631588aab82936e2a625cef555d4dff3d69a324fbac248dd8ba9791e2acb9fc"
+checksum = "3595eb3a46416f4c8732fa65d3662ce019412c6d933b770f3ddee138cfd1edfc"
 dependencies = [
  "wit-bindgen",
 ]
