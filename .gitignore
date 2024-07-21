@@ -1,3 +1,4 @@
 /target
 output.log
 .idea
+Pulumi.test.yaml

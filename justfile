@@ -8,7 +8,7 @@ run:
 
 install-requirements:
     cargo install --locked cargo-component@0.14.0
-    cargo install --index "sparse+https://cargo.cloudsmith.io/andrzej-ressel-github/pulumi-wasm/" --locked pulumi_wasm_runner@0.0.0-NIGHTLY-fe794b0
+    cargo install --index "sparse+https://cargo.cloudsmith.io/andrzej-ressel-github/pulumi-wasm/" --locked pulumi_wasm_runner@0.0.0-NIGHTLY-886e811
 
 [windows]
 local-test:
