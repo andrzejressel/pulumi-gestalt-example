@@ -44,8 +44,6 @@ jobs:
         run: just install-requirements
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install pulumi wasm language
-        run: pulumi plugin install language wasm "0.0.0-NIGHTLY-886e811" --server github://api.github.com/andrzejressel/pulumi-wasm
       - name: Run
         run: |
           pulumi stack init test
