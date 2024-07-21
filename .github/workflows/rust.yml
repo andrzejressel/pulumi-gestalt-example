@@ -51,7 +51,9 @@ jobs:
         run: pulumi plugin install language wasm "0.0.0-NIGHTLY-fe794b0" --server github://api.github.com/andrzejressel/pulumi-wasm
       - name: Run
         run: |
-          PULUMI_CONFIG_PASSPHRASE="" pulumi stack init test
+          pulumi stack init test
           pulumi stack select test
           pulumi up -y
           pulumi stack output --json
+        env:
+          PULUMI_CONFIG_PASSPHRASE: ""
