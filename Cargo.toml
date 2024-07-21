@@ -7,6 +7,6 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-pulumi_wasm_random = {version = "4.15.0-0.0.0-NIGHTLY-fe794b0", registry = "cloudsmith"}
-pulumi_wasm_rust = {version = "0.0.0-NIGHTLY-fe794b0", registry = "cloudsmith"}
+pulumi_wasm_random = {version = "=4.15.0-0.0.0-NIGHTLY-fe794b0", registry = "cloudsmith"}
+pulumi_wasm_rust = {version = "=0.0.0-NIGHTLY-fe794b0", registry = "cloudsmith"}
 anyhow = "1.0.86"
