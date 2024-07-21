@@ -1,0 +1,2 @@
+name: Pulumi-WASM-Example
+runtime: wasm
