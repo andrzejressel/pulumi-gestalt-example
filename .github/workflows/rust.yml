@@ -39,11 +39,11 @@ jobs:
         if: runner.os == 'macOS'
       - run: pulumi version
       - run: pulumi login --local
-      - uses: Swatinem/rust-cache@v2
       - name: Install requirements
         run: just install-requirements
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: Swatinem/rust-cache@v2
       - name: Run
         run: |
           pulumi stack init test
