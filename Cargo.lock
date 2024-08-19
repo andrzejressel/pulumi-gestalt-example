@@ -207,9 +207,9 @@ checksum = "884e2677b40cc8c339eaefcb701c32ef1fd2493d71118dc0ca4b6a736c93bd67"
 
 [[package]]
 name = "libc"
-version = "0.2.155"
+version = "0.2.157"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "97b3888a4aecf77e811145cadf6eef5901f4782c53886191b2f693f24761847c"
+checksum = "374af5f94e54fa97cf75e945cce8a6b201e88a1a07e688b47dfd2a59c66dbd86"
 
 [[package]]
 name = "log"
@@ -262,9 +262,9 @@ dependencies = [
 
 [[package]]
 name = "pulumi_wasm_common"
-version = "0.0.0-NIGHTLY-4261dfd"
+version = "0.0.0-NIGHTLY-9c867c2"
 source = "sparse+https://cargo.cloudsmith.io/andrzej-ressel-github/pulumi-wasm/"
-checksum = "78f55ad8b30c57323deefdc004f7e17e20a8558f23e16ca316fb3367caf0952c"
+checksum = "4a0816b4d1af1b86d33196c8a15a652948d2b6de1059197867e9c006ebb4f39f"
 dependencies = [
  "log",
  "pulumi_wasm_wit",
@@ -282,9 +282,9 @@ dependencies = [
 
 [[package]]
 name = "pulumi_wasm_random"
-version = "4.15.0-0.0.0-NIGHTLY-4261dfd"
+version = "4.15.0-0.0.0-NIGHTLY-9c867c2"
 source = "sparse+https://cargo.cloudsmith.io/andrzej-ressel-github/pulumi-wasm/"
-checksum = "b1e8e588e7c008495a5b6dd50ec3556ef88d35bd059b60553e4d9ab80b6f8a74"
+checksum = "1f05a006bbf193b47e74a267166754e11ac7630565841581e26900e1012f48f2"
 dependencies = [
  "automod",
  "pulumi_wasm_rust",
@@ -294,9 +294,9 @@ dependencies = [
 
 [[package]]
 name = "pulumi_wasm_rust"
-version = "0.0.0-NIGHTLY-4261dfd"
+version = "0.0.0-NIGHTLY-9c867c2"
 source = "sparse+https://cargo.cloudsmith.io/andrzej-ressel-github/pulumi-wasm/"
-checksum = "3d9f6a82f2f0773cab8d8eeac108c2e0b74238cffc3f4c9235590512be5dc5a9"
+checksum = "18960d985752068829a734512534b1c460719071be61fdb746d189de4d78df29"
 dependencies = [
  "anyhow",
  "bitflags",
@@ -316,9 +316,9 @@ dependencies = [
 
 [[package]]
 name = "pulumi_wasm_rust_macro"
-version = "0.0.0-NIGHTLY-4261dfd"
+version = "0.0.0-NIGHTLY-9c867c2"
 source = "sparse+https://cargo.cloudsmith.io/andrzej-ressel-github/pulumi-wasm/"
-checksum = "8b7772f97afea610c2af5ee82f2dcc3588647fd6fa46ac0cd536db51619e37a7"
+checksum = "6461a3af288c166aa2a468dcf72b73904c89f30803ab814b9e202ed091d02f7e"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -327,9 +327,9 @@ dependencies = [
 
 [[package]]
 name = "pulumi_wasm_wit"
-version = "0.0.0-NIGHTLY-4261dfd"
+version = "0.0.0-NIGHTLY-9c867c2"
 source = "sparse+https://cargo.cloudsmith.io/andrzej-ressel-github/pulumi-wasm/"
-checksum = "44a01e9761055bfe2b86f690aa320a0ab14747c7c04908d04d502c24881d69a0"
+checksum = "cd8390098abbd18c0886649a380f7fb1c29c65300fdae3a57fe6c94edc8dd9eb"
 dependencies = [
  "wit-bindgen",
 ]
@@ -413,9 +413,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "2.0.74"
+version = "2.0.75"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1fceb41e3d546d0bd83421d3409b1460cc7444cd389341a4c880fe7a042cb3d7"
+checksum = "f6af063034fc1935ede7be0122941bafa9bacb949334d090b77ca98b5817c7d9"
 dependencies = [
  "proc-macro2",
  "quote",
