@@ -8,7 +8,6 @@ This is example for [Pulumi WASM](https://github.com/andrzejressel/pulumi-wasm)
 #### Requirements
 
 - Pulumi
-- [protoc](https://github.com/hyperium/tonic?tab=readme-ov-file#dependencies)
 - [cargo-binstall](https://github.com/cargo-bins/cargo-binstall)
 - [Just](https://github.com/casey/just)
 
