@@ -3,16 +3,27 @@ name = "pulumi_wasm_example"
 version = "0.1.0"
 edition = "2021"
 
+[workspace]
+members = [
+    "random"
+]
+
 [lib]
 crate-type = ["cdylib"]
 
 [dependencies]
-pulumi_wasm_rust = {version = "=0.0.0-NIGHTLY-47ef049", registry = "cloudsmith"}
-pulumi_wasm_wit = { version = "=0.0.0-NIGHTLY-47ef049", registry = "cloudsmith", features = ["client"] }
+anyhow.workspace = true
+pulumi_random.workspace = true
+pulumi_wasm_rust.workspace = true
+
+[build-dependencies]
+
+[workspace.dependencies]
+pulumi_random = { path = "random" }
+
+pulumi_wasm_rust = {version = "=0.0.0-NIGHTLY-7de70f3", registry = "cloudsmith"}
 wit-bindgen = "0.36.0"
 anyhow = "1.0.95"
 bon = "3.3.1"
 serde = { version = "1.0.216", features = ["derive"] }
-
-[build-dependencies]
-pulumi_wasm_build = { version = "=0.0.0-NIGHTLY-47ef049", registry = "cloudsmith" }
+pulumi_wasm_build = { version = "=0.0.0-NIGHTLY-7de70f3", registry = "cloudsmith" }

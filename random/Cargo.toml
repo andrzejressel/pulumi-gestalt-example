@@ -1,0 +1,13 @@
+[package]
+name = "pulumi_random"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pulumi_wasm_rust.workspace = true
+wit-bindgen.workspace = true
+bon.workspace = true
+serde.workspace = true
+
+[build-dependencies]
+pulumi_wasm_build.workspace = true
