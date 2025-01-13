@@ -21,9 +21,9 @@ pulumi_wasm_rust.workspace = true
 [workspace.dependencies]
 pulumi_random = { path = "random" }
 
-pulumi_wasm_rust = {version = "=0.0.0-NIGHTLY-7de70f3", registry = "cloudsmith"}
-wit-bindgen = "0.36.0"
+pulumi_wasm_rust = {version = "=25.1.13-aed91f7", registry = "cloudsmith"}
+wit-bindgen = "0.37.0"
 anyhow = "1.0.95"
 bon = "3.3.1"
 serde = { version = "1.0.216", features = ["derive"] }
-pulumi_wasm_build = { version = "=0.0.0-NIGHTLY-7de70f3", registry = "cloudsmith" }
+pulumi_wasm_build = { version = "=25.1.13-aed91f7", registry = "cloudsmith" }
