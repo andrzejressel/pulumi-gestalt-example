@@ -8,8 +8,8 @@ run:
 
 install-requirements:
     cargo binstall -y cargo-component@0.20.0
-    cargo binstall -y --index "sparse+https://cargo.cloudsmith.io/andrzej-ressel-github/pulumi-wasm/" pulumi_wasm_runner@25.1.13-aed91f7
-    pulumi plugin install language wasm "25.1.13-aed91f7" --server github://api.github.com/andrzejressel/pulumi-wasm-releases
+    cargo binstall -y --index "sparse+https://cargo.cloudsmith.io/andrzej-ressel-github/pulumi-wasm/" pulumi_wasm_runner@25.1.26-43c20fc
+    pulumi plugin install language wasm "25.1.26-43c20fc" --server github://api.github.com/andrzejressel/pulumi-wasm-releases
 
 [windows]
 local-test:
