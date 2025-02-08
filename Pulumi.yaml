@@ -1,2 +1,2 @@
-name: Pulumi-WASM-Example
-runtime: wasm
+name: Pulumi-Gestalt-Example
+runtime: gestalt

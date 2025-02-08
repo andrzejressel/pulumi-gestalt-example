@@ -1,8 +1,8 @@
 use anyhow::Error;
 use pulumi_random::random_string;
 use pulumi_random::random_string::RandomStringArgs;
-use pulumi_wasm_rust::{Output, PulumiContext};
-use pulumi_wasm_rust::{add_export, pulumi_main};
+use pulumi_gestalt_rust::{Output, PulumiContext};
+use pulumi_gestalt_rust::{add_export, pulumi_main};
 
 pulumi_main!();
 
