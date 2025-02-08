@@ -4,9 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-pulumi_wasm_rust.workspace = true
+pulumi_gestalt_rust.workspace = true
 wit-bindgen.workspace = true
 bon.workspace = true
 
 [build-dependencies]
-pulumi_wasm_build.workspace = true
+pulumi_gestalt_build.workspace = true

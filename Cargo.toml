@@ -1,5 +1,5 @@
 [package]
-name = "pulumi_wasm_example"
+name = "pulumi_gestalt_example"
 version = "0.1.0"
 edition = "2021"
 
@@ -14,16 +14,13 @@ crate-type = ["cdylib"]
 [dependencies]
 anyhow.workspace = true
 pulumi_random.workspace = true
-pulumi_wasm_rust.workspace = true
-
-[build-dependencies]
+pulumi_gestalt_rust.workspace = true
 
 [workspace.dependencies]
 pulumi_random = { path = "random" }
 
-pulumi_wasm_rust = {version = "=25.1.26-43c20fc", registry = "cloudsmith"}
-wit-bindgen = "0.37.0"
+pulumi_gestalt_rust = {version = "=25.2.8-ad18c22", registry = "pulumi-gestalt"}
+wit-bindgen = "0.39.0"
 anyhow = "1.0.95"
 bon = "3.3.1"
-serde = { version = "1.0.216", features = ["derive"] }
-pulumi_wasm_build = { version = "=25.1.26-43c20fc", registry = "cloudsmith" }
+pulumi_gestalt_build = { version = "=25.2.8-ad18c22", registry = "pulumi-gestalt" }
