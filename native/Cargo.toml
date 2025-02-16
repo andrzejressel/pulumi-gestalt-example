@@ -1,0 +1,9 @@
+[package]
+name = "pulumi_gestalt_example_native"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+pulumi_random.workspace = true
+pulumi_gestalt_rust.workspace = true

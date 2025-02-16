@@ -1,0 +1,12 @@
+[package]
+name = "pulumi_gestalt_example_wasm"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+anyhow.workspace = true
+pulumi_random.workspace = true
+pulumi_gestalt_rust.workspace = true

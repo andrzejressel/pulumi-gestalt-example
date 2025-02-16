@@ -1,13 +1,12 @@
-use anyhow::Error;
+use anyhow::Result;
 use pulumi_random::random_string;
 use pulumi_random::random_string::RandomStringArgs;
-use pulumi_gestalt_rust::{Output, PulumiContext};
-use pulumi_gestalt_rust::{add_export, pulumi_main};
+use pulumi_gestalt_rust::*;
 
 pulumi_main!();
 
-fn pulumi_main(context: &PulumiContext) -> Result<(), Error> {
-    let length: Output<i32> = Output::new(context, &4);
+fn pulumi_main(context: &Context) -> Result<()> {
+    let length: Output<i32> = context.new_output(&4);
     let random_string_1 = random_string::create(
         context,
         "test_1",
