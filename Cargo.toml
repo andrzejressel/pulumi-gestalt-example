@@ -1,26 +1,20 @@
-[package]
-name = "pulumi_gestalt_example"
-version = "0.1.0"
-edition = "2021"
-
 [workspace]
+resolver = "2"
 members = [
-    "random"
+    "native",
+    "random",
+    "wasm"
 ]
 
-[lib]
-crate-type = ["cdylib"]
-
-[dependencies]
-anyhow.workspace = true
-pulumi_random.workspace = true
-pulumi_gestalt_rust.workspace = true
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
 
 [workspace.dependencies]
 pulumi_random = { path = "random" }
 
-pulumi_gestalt_rust = {version = "=25.2.8-ad18c22", registry = "pulumi-gestalt"}
+pulumi_gestalt_rust = {version = "=25.2.14-9374348", registry = "pulumi-gestalt"}
 wit-bindgen = "0.39.0"
 anyhow = "1.0.95"
 bon = "3.3.1"
-pulumi_gestalt_build = { version = "=25.2.8-ad18c22", registry = "pulumi-gestalt" }
+pulumi_gestalt_build = { version = "=25.2.14-9374348", registry = "pulumi-gestalt" }

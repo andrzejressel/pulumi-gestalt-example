@@ -10,7 +10,49 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  build:
+  wasm-build:
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    env:
+      RUST_BACKTRACE: "full"
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: extractions/setup-just@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: brew install pulumi
+        if: runner.os == 'macOS'
+      - run: pulumi version
+      - run: pulumi login --local
+      - uses: cargo-bins/cargo-binstall@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install Wasm requirements
+        run: just install-requirements install-wasm-requirements
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: Swatinem/rust-cache@v2
+      - name: Run
+        run: |
+          cd wasm
+          pulumi stack init test
+          pulumi stack select test
+          pulumi up -y
+          pulumi stack output --json
+        env:
+          PULUMI_CONFIG_PASSPHRASE: ""
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  native-build:
 
     runs-on: ${{ matrix.os }}
 
@@ -43,6 +85,7 @@ jobs:
       - uses: Swatinem/rust-cache@v2
       - name: Run
         run: |
+          cd native
           pulumi stack init test
           pulumi stack select test
           pulumi up -y

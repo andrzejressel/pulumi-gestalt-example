@@ -1,6 +1,6 @@
-## Pulumi WASM example
+## Pulumi Gestalt example
 
-This is example for [Pulumi WASM](https://github.com/andrzejressel/pulumi-wasm)
+This is example for [Pulumi Gestalt](https://github.com/andrzejressel/pulumi-gestalt)
 
 
 ### Quick start
@@ -12,6 +12,8 @@ This is example for [Pulumi WASM](https://github.com/andrzejressel/pulumi-wasm)
 - [Just](https://github.com/casey/just)
 
 #### Running
+
+Select either `native` or `wasm` and open terminal in respective directory. If unsure select `native`.
 
 ```shell
 just install-requirenments # Installs pulumi-wasm pulumi plugin and pulumi-wasm-runner
