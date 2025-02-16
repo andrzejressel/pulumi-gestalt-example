@@ -1,9 +1,7 @@
 set windows-shell := ["pwsh.exe", "-c"]
-binary := "../target/debug/pulumi_gestalt_example_native"
 
 run:
-    cargo build
-    {{binary}}
+    cargo run
 
 install-requirements:
     pulumi plugin install language gestalt "25.2.14-9374348" --server github://api.github.com/andrzejressel/pulumi-gestalt-releases
