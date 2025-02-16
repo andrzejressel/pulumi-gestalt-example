@@ -36,8 +36,10 @@ jobs:
       - uses: cargo-bins/cargo-binstall@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install Wasm requirements
-        run: just install-requirements install-wasm-requirements
+      - name: Install requirements
+        run: |
+          cd wasm
+          just install-requirements
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: Swatinem/rust-cache@v2
@@ -79,7 +81,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install requirements
-        run: just install-requirements
+        run: |
+          cd native
+          just install-requirements
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: Swatinem/rust-cache@v2
