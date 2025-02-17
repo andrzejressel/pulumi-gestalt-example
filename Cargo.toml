@@ -14,7 +14,5 @@ edition = "2021"
 pulumi_random = { path = "random" }
 
 pulumi_gestalt_rust = {version = "=25.2.14-9374348", registry = "pulumi-gestalt"}
-wit-bindgen = "0.39.0"
 anyhow = "1.0.95"
-bon = "3.3.1"
 pulumi_gestalt_build = { version = "=25.2.14-9374348", registry = "pulumi-gestalt" }
