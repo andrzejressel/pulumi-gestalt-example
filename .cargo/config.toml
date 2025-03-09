@@ -1,2 +1,0 @@
-[registries.pulumi-gestalt]
-index = "sparse+https://cargo.cloudsmith.io/andrzej-ressel-github/pulumi-gestalt/"

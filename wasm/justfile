@@ -1,15 +1,14 @@
 set windows-shell := ["pwsh.exe", "-c"]
 binary := "pulumi_gestalt_wasm_runner"
-wasm := "../target/wasm32-wasip1/debug/pulumi_gestalt_example_wasm.wasm"
+wasm := "../target/wasm32-wasip2/debug/pulumi_gestalt_example_wasm.wasm"
 
 run:
-    cargo component build
+    cargo build --target wasm32-wasip2
     {{binary}} run --debug "{{wasm}}"
 
 install-requirements:
-    cargo binstall -y cargo-component@0.20.0
-    cargo binstall -y --index "sparse+https://cargo.cloudsmith.io/andrzej-ressel-github/pulumi-gestalt/" pulumi_gestalt_wasm_runner@25.2.14-9374348
-    pulumi plugin install language gestalt "25.2.14-9374348" --server github://api.github.com/andrzejressel/pulumi-gestalt-releases
+    cargo binstall -y pulumi_gestalt_wasm_runner@0.0.1
+    pulumi plugin install language gestalt "0.0.1" --server github://api.github.com/andrzejressel/pulumi-gestalt
 
 [windows]
 local-test:

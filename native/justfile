@@ -4,7 +4,7 @@ run:
     cargo run
 
 install-requirements:
-    pulumi plugin install language gestalt "25.2.14-9374348" --server github://api.github.com/andrzejressel/pulumi-gestalt-releases
+    pulumi plugin install language gestalt "0.0.1" --server github://api.github.com/andrzejressel/pulumi-gestalt
 
 [windows]
 local-test:
