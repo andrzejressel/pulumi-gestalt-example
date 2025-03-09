@@ -1,5 +1,5 @@
 [workspace]
-resolver = "2"
+resolver = "3"
 members = [
     "native",
     "random",
@@ -8,13 +8,12 @@ members = [
 
 [workspace.package]
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [workspace.dependencies]
 pulumi_random = { path = "random" }
 
-pulumi_gestalt_rust = {version = "=25.2.14-9374348", registry = "pulumi-gestalt"}
-wit-bindgen = "0.39.0"
+pulumi_gestalt_rust = "0.0.1"
 anyhow = "1.0.95"
 bon = "3.3.1"
-pulumi_gestalt_build = { version = "=25.2.14-9374348", registry = "pulumi-gestalt" }
+pulumi_gestalt_build = "0.0.1"
