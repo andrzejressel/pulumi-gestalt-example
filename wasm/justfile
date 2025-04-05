@@ -4,11 +4,11 @@ wasm := "../target/wasm32-wasip2/debug/pulumi_gestalt_example_wasm.wasm"
 
 run:
     cargo build --target wasm32-wasip2
-    {{binary}} run --debug "{{wasm}}"
+    {{binary}} run "{{wasm}}"
 
 install-requirements:
-    cargo binstall -y pulumi_gestalt_wasm_runner@0.0.1
-    pulumi plugin install language gestalt "0.0.1" --server github://api.github.com/andrzejressel/pulumi-gestalt
+    cargo binstall -y pulumi_gestalt_wasm_runner@0.0.2
+    pulumi plugin install language gestalt "0.0.2" --server github://api.github.com/andrzejressel/pulumi-gestalt
 
 [windows]
 local-test:
