@@ -45,7 +45,7 @@ jobs:
       - uses: Swatinem/rust-cache@v2
       - name: Run
         run: |
-          cd native
+          cd app
           pulumi stack init test
           pulumi stack select test
           pulumi up -y
