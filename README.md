@@ -8,15 +8,14 @@ This is example for [Pulumi Gestalt](https://github.com/andrzejressel/pulumi-ges
 #### Requirements
 
 - Pulumi
-- [cargo-binstall](https://github.com/cargo-bins/cargo-binstall)
 - [Just](https://github.com/casey/just)
 
 #### Running
 
-Select either `native` or `wasm` and open terminal in respective directory. If unsure select `native`.
+Run following commants in `app` directory
 
 ```shell
-just install-requirenments # Installs pulumi-wasm pulumi plugin and pulumi-wasm-runner
+just install-requirements # Installs pulumi-wasm pulumi plugin and pulumi-wasm-runner
 
 # Example stack
 export PULUMI_CONFIG_PASSPHRASE=" " # For unix

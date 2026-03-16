@@ -3,7 +3,9 @@ use pulumi_random::random_string;
 use pulumi_random::random_string::RandomStringArgs;
 use pulumi_gestalt_rust::*;
 
-pulumi_main!();
+fn main() {
+    run(pulumi_main).unwrap();
+}
 
 fn pulumi_main(context: &Context) -> Result<()> {
     let length: Output<i32> = context.new_output(&4);
