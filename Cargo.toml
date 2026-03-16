@@ -1,9 +1,8 @@
 [workspace]
 resolver = "3"
 members = [
-    "native",
+    "app",
     "random",
-    "wasm"
 ]
 
 [workspace.package]
@@ -13,7 +12,7 @@ edition = "2024"
 [workspace.dependencies]
 pulumi_random = { path = "random" }
 
-pulumi_gestalt_rust = "0.0.2"
+pulumi_gestalt_rust = "0.0.7"
 anyhow = "1.0.95"
 bon = "3.3.1"
-pulumi_gestalt_build = "0.0.2"
+pulumi_gestalt_build = "0.0.7"
