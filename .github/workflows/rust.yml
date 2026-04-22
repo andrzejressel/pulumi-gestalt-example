@@ -36,10 +36,9 @@ jobs:
       - uses: cargo-bins/cargo-binstall@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install requirements
+      - name: Install language plugin
         run: |
-          cd app
-          just install-requirements
+          pulumi plugin install language rust "0.0.9" --server github://api.github.com/andrzejressel/pulumi-gestalt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: Swatinem/rust-cache@v2

@@ -1,11 +1,5 @@
 set windows-shell := ["pwsh.exe", "-c"]
 
-run:
-    cargo run
-
-install-requirements:
-    pulumi plugin install language gestalt "0.0.7" --server github://api.github.com/andrzejressel/pulumi-gestalt
-
 [windows]
 local-test:
     #!pwsh
