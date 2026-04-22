@@ -8,14 +8,13 @@ This is example for [Pulumi Gestalt](https://github.com/andrzejressel/pulumi-ges
 #### Requirements
 
 - Pulumi
-- [Just](https://github.com/casey/just)
 
 #### Running
 
 Run following commants in `app` directory
 
 ```shell
-just install-requirements # Installs pulumi-wasm pulumi plugin and pulumi-wasm-runner
+pulumi plugin install language rust "0.0.9" --server github://api.github.com/andrzejressel/pulumi-gestalt
 
 # Example stack
 export PULUMI_CONFIG_PASSPHRASE=" " # For unix
