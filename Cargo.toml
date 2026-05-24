@@ -12,7 +12,7 @@ edition = "2024"
 [workspace.dependencies]
 pulumi_random = { path = "random" }
 
-pulumi_gestalt_rust = "0.0.9"
+pulumi_gestalt_rust = "0.0.12"
 anyhow = "1.0.95"
 bon = "3.3.1"
-pulumi_gestalt_build = "0.0.9"
+pulumi_gestalt_build = "0.0.12"

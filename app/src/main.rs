@@ -7,10 +7,10 @@ fn main() {
     run(pulumi_main).unwrap();
 }
 
-fn pulumi_main(context: &Context) -> Result<()> {
-    let length: Output<i32> = context.new_output(&4);
+fn pulumi_main(ctx: &Context) -> Result<()> {
+    let length: Output<i32> = ctx.new_output(&4);
     let random_string_1 = random_string::create(
-        context,
+        ctx,
         "test_1",
         RandomStringArgs::builder().length(length).build_struct(),
     );
@@ -18,7 +18,7 @@ fn pulumi_main(context: &Context) -> Result<()> {
     let new_length = random_string_1.result.map(|s| s.len() as i32);
 
     let random_string_2 = random_string::create(
-        context,
+        ctx,
         "test_2",
         RandomStringArgs::builder()
             .length(new_length)
@@ -26,16 +26,16 @@ fn pulumi_main(context: &Context) -> Result<()> {
     );
 
     let random_string_3 = random_string::create(
-        context,
+        ctx,
         "test_3",
         RandomStringArgs::builder()
             .length(random_string_2.length.map(|i| i * 2))
             .build_struct(),
     );
 
-    add_export("result", &random_string_1.result);
-    add_export("number_1", &random_string_1.length);
-    add_export("number_2", &random_string_2.length);
-    add_export("number_3", &random_string_3.length);
+    ctx.add_export("result", &random_string_1.result);
+    ctx.add_export("number_1", &random_string_1.length);
+    ctx.add_export("number_2", &random_string_2.length);
+    ctx.add_export("number_3", &random_string_3.length);
     Ok(())
 }

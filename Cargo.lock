@@ -19,9 +19,9 @@ checksum = "7f202df86484c868dbad7eaa557ef785d5c66295e41b460ef922eca0723b842c"
 
 [[package]]
 name = "askama"
-version = "0.15.4"
+version = "0.16.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "08e1676b346cadfec169374f949d7490fd80a24193d37d2afce0c047cf695e57"
+checksum = "f1bf825125edd887a019d0a3a837dcc5499a68b0d034cc3eb594070c3e18addc"
 dependencies = [
  "askama_macros",
  "itoa",
@@ -32,12 +32,13 @@ dependencies = [
 
 [[package]]
 name = "askama_derive"
-version = "0.15.4"
+version = "0.16.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7661ff56517787343f376f75db037426facd7c8d3049cef8911f1e75016f3a37"
+checksum = "e1c7065972a130eafa84215f21352ae15b4a7393da48c1f5e103904490736738"
 dependencies = [
  "askama_parser",
  "basic-toml",
+ "glob",
  "memchr",
  "proc-macro2",
  "quote",
@@ -49,18 +50,18 @@ dependencies = [
 
 [[package]]
 name = "askama_macros"
-version = "0.15.4"
+version = "0.16.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "713ee4dbfd1eb719c2dab859465b01fa1d21cb566684614a713a6b7a99a4e47b"
+checksum = "0e23b1d2c4bd39a41971f6124cef4cc6fd0540913ecb90919b69ab3bbe44ae1a"
 dependencies = [
  "askama_derive",
 ]
 
 [[package]]
 name = "askama_parser"
-version = "0.15.4"
+version = "0.16.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1d62d674238a526418b30c0def480d5beadb9d8964e7f38d635b03bf639c704c"
+checksum = "7db09fde9143e7ac4513358fb32ee32847125b63b18ea715afd487956da715da"
 dependencies = [
  "rustc-hash",
  "serde",
@@ -511,6 +512,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "glob"
+version = "0.3.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0cc23270f6e1808e30a928bdc84dea0b9b4136a8bc82338574f23baf47bbd280"
+
+[[package]]
 name = "h2"
 version = "0.4.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -553,6 +560,18 @@ checksum = "bf151400ff0baff5465007dd2f3e717f3fe502074ca563069ce3a6629d07b289"
 dependencies = [
  "foldhash",
 ]
+
+[[package]]
+name = "hashbrown"
+version = "0.16.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100"
+
+[[package]]
+name = "hashbrown"
+version = "0.17.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ed5909b6e89a2db4456e54cd5f673791d7eca6732202bbf2a9cc504fe2f9b84a"
 
 [[package]]
 name = "heck"
@@ -691,13 +710,14 @@ checksum = "b9e0384b61958566e926dc50660321d12159025e767c18e043daf26b70104c39"
 
 [[package]]
 name = "indexmap"
-version = "2.7.1"
+version = "2.14.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8c9c992b02b5b4c94ea26e32fe5bccb7aa7d9f390ab5c1221ff895bc7ea8b652"
+checksum = "d466e9454f08e4a911e14806c24e16fba1b4c121d1ea474396f396069cf949d9"
 dependencies = [
  "equivalent",
- "hashbrown",
+ "hashbrown 0.17.1",
  "serde",
+ "serde_core",
 ]
 
 [[package]]
@@ -941,9 +961,9 @@ dependencies = [
 
 [[package]]
 name = "pulumi_gestalt_build"
-version = "0.0.9"
+version = "0.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7649d9947125fc278979eeefabae825836ce94382e6248258b7a955139913e55"
+checksum = "d60eebceb0129adba961e5f9e14c0ad0866abddaa5ae06269fe7d9b2bd9a780a"
 dependencies = [
  "anyhow",
  "pulumi_gestalt_generator",
@@ -953,26 +973,28 @@ dependencies = [
 
 [[package]]
 name = "pulumi_gestalt_core"
-version = "0.0.9"
+version = "0.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5a8dd0c780e528c9fd2cf5e2d4d14887688185252435cd6905f70158258921bd"
+checksum = "7d1fe37374d733e593d8fb8ddbde1dca391493632df1b333ba022ac4ceb1b4f6"
 dependencies = [
  "anyhow",
  "futures",
  "pulumi_gestalt_domain",
+ "pulumi_gestalt_model",
  "serde_json",
  "uuid",
 ]
 
 [[package]]
 name = "pulumi_gestalt_domain"
-version = "0.0.9"
+version = "0.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b790b084453aac7a9c2bc3055f45adcb0bcacb16aa71747de5897d41feab60af"
+checksum = "9301054fbe9a5422affb3a73287592c30630427894ec01e80c7a5c998bf47850"
 dependencies = [
  "anyhow",
  "async-trait",
  "bon",
+ "pulumi_gestalt_model",
  "serde_json",
 ]
 
@@ -987,9 +1009,9 @@ dependencies = [
 
 [[package]]
 name = "pulumi_gestalt_generator"
-version = "0.0.9"
+version = "0.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5a667a41a89a5b0b3373b96e6bb44d0795d32f66f8c09061e79e328798b56d24"
+checksum = "5ece53f658b83dd73cd9be5ec470a50c4c2b47fed0ff48effeddc8473d7d36b3"
 dependencies = [
  "anyhow",
  "askama",
@@ -1010,9 +1032,9 @@ dependencies = [
 
 [[package]]
 name = "pulumi_gestalt_grpc_connection"
-version = "0.0.9"
+version = "0.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cc76d78f499ec7175ecd5351269b48005cebb628fa9a6b1de80a934b855665d6"
+checksum = "8d2832fe6af1cca8fbca8e504f8837d81e2b2160e6005c6b650ca6e5635c5911"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -1021,6 +1043,7 @@ dependencies = [
  "prost",
  "prost-types",
  "pulumi_gestalt_domain",
+ "pulumi_gestalt_model",
  "pulumi_gestalt_proto",
  "serde_json",
  "tokio",
@@ -1029,10 +1052,20 @@ dependencies = [
 ]
 
 [[package]]
-name = "pulumi_gestalt_proto"
-version = "0.0.9"
+name = "pulumi_gestalt_model"
+version = "0.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ff77bd3cc8c3674b5261e7cf5ae9c23013275c968dfd0086f97b4a3eab525604"
+checksum = "4f9f17a7723e828f74ec19c945b6d124d54dac96151a3a4ba24d518896e0de05"
+dependencies = [
+ "futures",
+ "rootcause",
+]
+
+[[package]]
+name = "pulumi_gestalt_proto"
+version = "0.0.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ec5dffe9681d2b1e4c34a2c5d76cc54482ea81b2e96061c73d8926f2d08f5a5c"
 dependencies = [
  "prost",
  "prost-types",
@@ -1041,29 +1074,41 @@ dependencies = [
 ]
 
 [[package]]
-name = "pulumi_gestalt_rust"
-version = "0.0.9"
+name = "pulumi_gestalt_pulumi_constant_string"
+version = "0.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4f0475eafc479457899d577d2af195c53327713e2fab7e77a7cb20e8082ae041"
+checksum = "bb4952978969a382b93bb82704f6335a44792f84dc3076afd3c26453e8155638"
+dependencies = [
+ "pulumi_gestalt_model",
+ "rootcause",
+]
+
+[[package]]
+name = "pulumi_gestalt_rust"
+version = "0.0.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ee1a41bdebe4856bf803ab791350112d3cb2eebaf9b8b80a79ce16d61926490f"
 dependencies = [
  "anyhow",
  "base64",
  "bon",
  "hex",
+ "pulumi_gestalt_model",
+ "pulumi_gestalt_pulumi_constant_string",
  "pulumi_gestalt_rust_integration",
- "pulumi_gestalt_serde_constant_string",
  "serde",
  "serde_json",
  "sha1",
  "sha2 0.11.0",
  "tokio",
+ "unicode-segmentation",
 ]
 
 [[package]]
 name = "pulumi_gestalt_rust_integration"
-version = "0.0.9"
+version = "0.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e36e6dfdbdc3e3da85e4c2f820c212728b878b76a020a01800cdac3ff7f27fb2"
+checksum = "539f5ba2d63a903bf1b5c8fc8579651679f7df14ffe3401536d0e67dc4fb5544"
 dependencies = [
  "anyhow",
  "bon",
@@ -1071,6 +1116,7 @@ dependencies = [
  "pulumi_gestalt_core",
  "pulumi_gestalt_domain",
  "pulumi_gestalt_grpc_connection",
+ "pulumi_gestalt_model",
  "pulumi_gestalt_proto",
  "pulumi_gestalt_schema",
  "serde_json",
@@ -1081,9 +1127,9 @@ dependencies = [
 
 [[package]]
 name = "pulumi_gestalt_schema"
-version = "0.0.9"
+version = "0.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c5a5276b836dd9fe1230027f8a85faf16fee3652b8c7c90fabad0a5934896b68"
+checksum = "34b4dcb30a2a514d04ed07a83c5d6a84ef85837253dbd4046f55131d82dfdf33"
 dependencies = [
  "anyhow",
  "convert_case",
@@ -1096,9 +1142,9 @@ dependencies = [
 
 [[package]]
 name = "pulumi_gestalt_serde_constant_string"
-version = "0.0.9"
+version = "0.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "27d5761586d29a4cd7c36a2b574f01693e1e12bc5ddd2d3ee841126aca4b6c30"
+checksum = "3eac37b6f45e38f6a324d431d240a001accadf46f43442d65a7c33bca32b1421"
 dependencies = [
  "serde",
 ]
@@ -1155,6 +1201,28 @@ name = "regex-syntax"
 version = "0.8.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2b15c43186be67a4fd63bee50d0303afffcef381492ebe2c5d87f324e1b8815c"
+
+[[package]]
+name = "rootcause"
+version = "0.12.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4fc4bd36159c7ce180fe2de1e5371ef107a2885f0048430f631e78202e2255d4"
+dependencies = [
+ "hashbrown 0.16.1",
+ "indexmap",
+ "rootcause-internals",
+ "rustc-hash",
+ "triomphe",
+]
+
+[[package]]
+name = "rootcause-internals"
+version = "0.12.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4d0df4f84d119d09b5c9c9e8db0fe9bfb5b47b04d0bb95b0763cf81bd9baa559"
+dependencies = [
+ "triomphe",
+]
 
 [[package]]
 name = "rustc-hash"
@@ -1522,6 +1590,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "triomphe"
+version = "0.1.15"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "dd69c5aa8f924c7519d6372789a74eac5b94fb0f8fcf0d4a97eb0bfc3e785f39"
+
+[[package]]
 name = "try-lock"
 version = "0.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1687,7 +1761,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "47b807c72e1bac69382b3a6fb3dbe8ea4c0ed87ff5629b8685ae6b9a611028fe"
 dependencies = [
  "bitflags",
- "hashbrown",
+ "hashbrown 0.15.2",
  "indexmap",
  "semver",
 ]
@@ -1791,9 +1865,9 @@ checksum = "589f6da84c646204747d1270a2a5661ea66ed1cced2631d546fdfb155959f9ec"
 
 [[package]]
 name = "winnow"
-version = "0.7.4"
+version = "1.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0e97b544156e9bebe1a0ffbc03484fc1ffe3100cbce3ffb17eac35f7cdd7ab36"
+checksum = "0592e1c9d151f854e6fd382574c3a0855250e1d9b2f99d9281c6e6391af352f1"
 dependencies = [
  "memchr",
 ]
