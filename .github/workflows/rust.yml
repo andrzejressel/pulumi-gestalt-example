@@ -38,7 +38,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install language plugin
         run: |
-          pulumi plugin install language rust "0.0.9" --server github://api.github.com/andrzejressel/pulumi-gestalt
+          pulumi plugin install language rust "0.0.12" --server github://api.github.com/andrzejressel/pulumi-gestalt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: Swatinem/rust-cache@v2
